@@ -5,14 +5,26 @@ Recipes for making your React.js Components Awesome
 
 ```ruby
 
-  let count = 0;
-  console.log(count);  // 0
-  const API_KEY = 'KEY';
-  API_KEY = 'NEW_KEY'; // ERROR! "API_KEY" is read-only
+let count = 0;
+console.log(count);  // 0
+const API_KEY = 'KEY';
+API_KEY = 'NEW_KEY'; // ERROR! "API_KEY" is read-only
+
 console.log(count);  // count is not defined
 ```
 #### Arrow Function
+![Arrow Function](http://www.uxebu.com/wp-content/uploads/2015/05/arrow-function4-150px-150x134.jpg)
 ##### exmaple 1
+```ruby
+arr.map(val => val * 2)
+
+// instead of
+arr.map(function(val) { return val * 2 })
+
+const isThree = num => num === 3;
+const containsThree = arr => !!arr.find(item => item === 3);
+```
+##### exmaple 2
 ```ruby
 var a = [
   "Hydrogen",
@@ -25,7 +37,7 @@ var a2 = a.map(function(s){ return s.length });
 
 var a3 = a.map( s => s.length );
 ```
-##### exmaple 2
+##### exmaple 3
 ```ruby
 // normal
 function(arg) {
@@ -62,7 +74,7 @@ bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 #### Template Strings
 ##### exmaple 1
 ```ruby
-//define and using a template:
+// define and using a template
 const tmpl = addrs => html`
       <table>
       ${addrs.map(addr => html`
@@ -72,13 +84,13 @@ const tmpl = addrs => html`
       </table>
   `;
 
-//the template is used like this:
+// the template is used like this
 console.log(tmpl([
   { first: '<Jane>', last: 'Bond' },
   { first: 'Lars', last: '<Croft>' },
 ]));
 
-//output:
+// output
 <table>
 
       <tr>Jane</tr>
