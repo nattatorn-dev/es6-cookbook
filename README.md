@@ -12,8 +12,7 @@ Recipes for making your React.js Components Awesome
 console.log(count);  // count is not defined
 ```
 #### Arrow Function
-
-###### Shorter functions
+##### exmaple 1
 ```ruby
 var a = [
   "Hydrogen",
@@ -26,6 +25,7 @@ var a2 = a.map(function(s){ return s.length });
 
 var a3 = a.map( s => s.length );
 ```
+##### exmaple 2
 ```ruby
 // normal
 function(arg) {
@@ -60,6 +60,36 @@ bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 ```
 
 #### Template Strings
+##### exmaple 1
+```ruby
+//define and using a template:
+const tmpl = addrs => html`
+      <table>
+      ${addrs.map(addr => html`
+          <tr>$${addr.first}</tr>
+          <tr>$${addr.last}</tr>
+      `)}
+      </table>
+  `;
+
+//the template is used like this:
+console.log(tmpl([
+  { first: '<Jane>', last: 'Bond' },
+  { first: 'Lars', last: '<Croft>' },
+]));
+
+//output:
+<table>
+
+      <tr>Jane</tr>
+      <tr>&lt;Bond&gt;</tr>
+
+      <tr>&lt;Lars&gt;</tr>
+      <tr>Croft</tr>
+
+</table>
+```
+##### exmaple 2
 ```ruby
 const name = 'Suranart';
 
