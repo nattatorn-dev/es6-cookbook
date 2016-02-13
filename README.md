@@ -1,6 +1,10 @@
 # React-Redux-ES6-Cookbook
 Recipes for making your React.js Components Awesome
 
+# Table of Contents
+1. [Let, Const](#Let,-Const)
+3. [Spread Operator](#####Spread-Operator)
+
 #### Let, Const
 
 ```ruby
