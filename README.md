@@ -2,8 +2,8 @@
 Recipes for making your React.js Components Awesome
 
 # Table of Contents
-1. [Let, Const](#Let,-Const)
-3. [Spread Operator](#Spread-Operator)
+1. [Let, Const](#let,-const)
+3. [Spread Operator](#spread-operator)
 
 #### Let, Const
 
