@@ -147,3 +147,12 @@ class SkinnedMesh extends THREE.Mesh {
   }
 }
 ```
+#### Spread Operator
+```ruby
+let params = [ "hello", true, 7 ]
+let other = [ 1, 2, params ] // [ 1, 2, "hello", true, 7 ]
+f(1, 2, params) === 9
+
+let str = "foo"
+let chars = [str] // [ "f", "o", "o" ]
+```
