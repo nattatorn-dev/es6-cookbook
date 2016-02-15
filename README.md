@@ -4,8 +4,8 @@ Recipes for making your React.js Components Awesome
 # Table of Contents
 1. [Let, Const](#let-const)
 2. [Arrow Function](#arrow-function)
-3. [Let, Const](#template-stringst)
-4. [Spread Operator](#classes)
+3. [Template Stringst](#template-stringst)
+4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
 
 #### Let, Const
