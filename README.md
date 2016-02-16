@@ -7,7 +7,7 @@ Recipes for making your React.js Components Awesome
 3. [Template Stringst](#template-stringst)
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
-6. [union, intersection, difference](#union-intersection-difference)
+6. [Union, Intersection, Difference](#union-intersection-difference)
 
 #### Let, Const
 
