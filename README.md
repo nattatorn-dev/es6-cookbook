@@ -7,6 +7,7 @@ Recipes for making your React.js Components Awesome
 3. [Template Stringst](#template-stringst)
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
+6. [union, intersection, difference](#union-intersection-difference)
 
 #### Let, Const
 
@@ -162,4 +163,28 @@ f(1, 2, params) === 9
 
 let str = "foo"
 let chars = [str] // [ "f", "o", "o" ]
+```
+#### Union, Intersection, Difference
+```ruby
+// union
+let a = new Set([1,2,3]);
+let b = new Set([4,3,2]);
+let union = new Set([...a, ...b]);
+// {1,2,3,4}
+
+// intersection
+let a = new Set([1,2,3]);
+let b = new Set([4,3,2]);
+let intersection = new Set(
+[...a].filter(x => b.has(x)));
+// {2,3}
+
+// difference
+let a = new Set([1,2,3]);
+let b = new Set([4,3,2]);
+let difference = new Set(
+[...a].filter(x => !b.has(x)));
+// {1}
+
+[credit: Dr. Axel Rauschmayer](http://www.2ality.com/2015/01/es6-set-operations.html)
 ```
