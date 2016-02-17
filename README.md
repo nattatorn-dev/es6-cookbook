@@ -8,7 +8,7 @@ Recipes for making your React.js Components Awesome
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
-
+7. Into the void
 #### Let, Const
 
 ```ruby
