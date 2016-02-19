@@ -9,8 +9,9 @@ Recipes for making your React.js Components Awesome
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
 7. [Map](#map)
-#### Let, Const
 
+
+#### Let, Const
 ```ruby
 
 let count = 0;
@@ -192,22 +193,22 @@ let difference = new Set(
 ##### Exmaple 1 (Basic operations, size, clear and chainable)
 ```ruby
 let map = new Map();
-map.set('foo', 123);
-map.get('foo')
+map.set('dog', 123);
+map.get('dog')
 // 123
 
-map.has('foo')
+map.has('dog')
 // true
 
-map.delete('foo')
+map.delete('dog')
 // true
 
-map.has('foo')
+map.has('dog')
 false
 
 let map = new Map();
-map.set('foo', true);
-map.set('bar', false);
+map.set('dog', true);
+map.set('cat', false);
 
 map.size
 // 2
