@@ -8,7 +8,7 @@ Recipes for making your React.js Components Awesome
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
-7. Into the void
+7. [Map](#map)
 #### Let, Const
 
 ```ruby
@@ -187,4 +187,43 @@ let difference = new Set(
 // {1}
 
 [credit: Dr. Axel Rauschmayer](http://www.2ality.com/2015/01/es6-set-operations.html)
+```
+#### Map
+##### Exmaple 1 (Basic operations, size, clear and chainable)
+```ruby
+let map = new Map();
+map.set('foo', 123);
+map.get('foo')
+// 123
+
+map.has('foo')
+// true
+
+map.delete('foo')
+// true
+
+map.has('foo')
+false
+
+let map = new Map();
+map.set('foo', true);
+map.set('bar', false);
+
+map.size
+// 2
+map.clear();
+map.size
+// 0
+
+let map = new Map([
+    [ 1, 'dog' ],
+    [ 2, 'cat' ],
+    [ 3, 'fish' ]
+]);
+
+// the set method is chainable
+let map = new Map()
+.set(1, 'dog')
+.set(2, 'cat')
+.set(3, 'fish');
 ```
