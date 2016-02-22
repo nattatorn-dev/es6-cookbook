@@ -9,7 +9,7 @@ Recipes for making your React.js Components Awesome
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
 7. [Map](#map)
-
+8. [Promise](#promise)
 
 #### Let, Const
 ```ruby
@@ -227,4 +227,76 @@ let map = new Map()
 .set(1, 'dog')
 .set(2, 'cat')
 .set(3, 'fish');
+```
+
+#### Promise
+#### Example 1
+```ruby
+
+// old pattern
+$.ajax('/stuff', {
+  success: function(){
+    console.log('succeeded');
+  },
+  error: function(){
+    console.log('failed');
+  }
+});
+
+// es6
+fetch('/stuff')
+  .then(function(){
+    console.log('succeeded')
+  })
+  .catch(function(){
+    console.log('failed')
+  });
+
+//multi task
+$.ajax('./stuff', {
+    success: function(){
+      $.ajax('./todo_stuff',{
+        success: function(){
+          console.log('call todo_stuff is succeeded');
+        },
+        error: function(){
+          console.log('error')
+        }
+      });
+    },
+    error: function(){
+      console.log('error');
+    }
+});
+
+// es6
+fetch('/stuff')
+  .then(function(){
+     return fetch('/todo_stuff');
+  })
+  .then(function(){
+      console.log('call todo_stuff in succeeded');
+  })
+  .catch(function(){
+      console.log('error');
+  });
+```
+##### Example 2
+```ruby
+let promise = new Promise((resolve, reject) => {
+
+  // when success, resolve  
+  let value = 'success';
+  resolve(value);
+
+  // when an error occurred, reject
+  reject(new Error('Something happened!'));
+});
+promise.then(response => {
+  console.log(response);
+}, error => {
+  console.log(error);
+});
+
+// success
 ```
