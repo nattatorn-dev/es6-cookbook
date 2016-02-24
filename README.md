@@ -10,7 +10,7 @@ Recipes for making your React.js Components Awesome
 6. [Union, Intersection, Difference](#union-intersection-difference)
 7. [Map](#map)
 8. [Promise](#promise)
-9. 
+9. [Default, Rest, Spread](#default-rest-spread)
 
 #### Let, Const
 ```ruby
@@ -300,4 +300,60 @@ promise.then(response => {
 });
 
 // success
+```
+##### Default, Rest and Spread
+```ruby
+// default
+let divided = function(number, divisor = 2){
+    return number / divisor;
+}
+
+console.log(divided(4, 2)); // 2
+console.log(divided(2));    // 1
+console.log(divided(2, undefined));    // 1
+console.log(divided(2, null));    // 1
+
+// rest : example 1
+function size(...theArgs) {
+  console.log(theArgs.length);
+}
+
+size(1, 2, 4, 6,{'number': 1 },[1, 2, 3]); // 6
+
+// example 2
+function sum(...numbers) {
+  let result = 0;
+
+  numbers.forEach(function (number) {
+    result += number;
+  });
+  return result;
+}
+
+console.log(sum(2)); // 2
+console.log(sum(2, 4, 6)); // 12
+
+// spread : example 1
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+let args = [1, 2, 3];
+
+console.log(sum.apply(undefined, args)); // 6
+
+
+let evenNumbers = [2, 4], oddNumbers = [1, 3]
+
+console.log(sum.apply(...evenNumbers, ...oddNumbers, 100))
+
+// example 2
+function minus(a, b){
+	return a - b;
+}
+
+let evenNumbers = [2, 4, 6], oddNumbers = [1, 5]
+
+console.log(minus(...evenNumbers)) // -2
+console.log(minus(...oddNumbers)) // -4
 ```
