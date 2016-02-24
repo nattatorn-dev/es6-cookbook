@@ -82,8 +82,28 @@ bob.printFriends(); // Cannot read property '_name' of undefined
 bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 ```
 
-#### Template Strings
-##### exmaple 1
+##### example 1
+```javascript
+// operator
+let number1 = 10,
+    number2 = 22;
+
+let sum = `${number1} + ${number2} = ${number1 + number2}`
+
+console.log(sum); // 10 + 22 = 32
+
+// multi-line syntax
+let myFav = `javascript
+sass
+c#
+ruby`
+
+console.log(myFav) // javascript
+                   // sass
+                   // c#
+                   // ruby
+```
+##### exmaple 2
 ```javascript
 // define and using a template
 const tmpl = addrs => html`
@@ -111,25 +131,6 @@ console.log(tmpl([
       <tr>Croft</tr>
 
 </table>
-```
-##### exmaple 2
-```javascript
-const name = 'Suranart';
-
-const message = `Hello! "${name}".`;
-
-// equivalent to
-// const message = "Hello! \"" + name + "\".";
-
-console.log(message);
-const name = 'Suranart';
-
-const message = `Hello! "${name}".`;
-
-// equivalent to
-// const message = "Hello! \"" + name + "\".";
-
-console.log(message);
 ```
 #### Classes
 ##### exmaple 1
@@ -170,21 +171,21 @@ let chars = [str] // [ "f", "o", "o" ]
 #### Union, Intersection, Difference
 ```javascript
 // union
-let a = new Set([1,2,3]);
-let b = new Set([4,3,2]);
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
 let union = new Set([...a, ...b]);
 // {1,2,3,4}
 
 // intersection
-let a = new Set([1,2,3]);
-let b = new Set([4,3,2]);
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
 let intersection = new Set(
 [...a].filter(x => b.has(x)));
 // {2,3}
 
 // difference
-let a = new Set([1,2,3]);
-let b = new Set([4,3,2]);
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
 let difference = new Set(
 [...a].filter(x => !b.has(x)));
 // {1}
@@ -359,7 +360,7 @@ console.log(minus(...evenNumbers)) // -2
 console.log(minus(...oddNumbers)) // -4
 ```
 
-#### Destructuring
+##### Destructuring
 ```javascript
 let user = {
   id: 1,
