@@ -13,7 +13,7 @@ Recipes for making your React.js Components Awesome
 9. [Default, Rest, Spread](#default-rest-spread)
 
 #### Let, Const
-```ruby
+```javascript
 
 let count = 0;
 console.log(count);  // 0
@@ -25,7 +25,7 @@ console.log(count);  // count is not defined
 #### Arrow Function
 ![Arrow Function](http://www.uxebu.com/wp-content/uploads/2015/05/arrow-function4-150px-150x134.jpg)
 ##### exmaple 1
-```ruby
+```javascript
 arr.map(val => val * 2)
 
 // instead of
@@ -35,20 +35,20 @@ const isThree = num => num === 3;
 const containsThree = arr => !!arr.find(item => item === 3);
 ```
 ##### exmaple 2
-```ruby
-var a = [
+```javascript
+let a = [
   "Hydrogen",
   "Helium",
   "Lithium",
   "Beryl­lium"
 ];
 
-var a2 = a.map(function(s){ return s.length });
+let a2 = a.map(function(s){ return s.length });
 
-var a3 = a.map( s => s.length );
+let a3 = a.map( s => s.length );
 ```
 ##### exmaple 3
-```ruby
+```javascript
 // normal
 function(arg) {
   // do something
@@ -60,7 +60,7 @@ function(arg) {
 }
 
 // share the same this as surrounding code.
-var bob = {
+let bob = {
   _name: "Bob",
   _friends: [],
   printFriends() {
@@ -83,7 +83,7 @@ bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 
 #### Template Strings
 ##### exmaple 1
-```ruby
+```javascript
 // define and using a template
 const tmpl = addrs => html`
       <table>
@@ -112,7 +112,7 @@ console.log(tmpl([
 </table>
 ```
 ##### exmaple 2
-```ruby
+```javascript
 const name = 'Suranart';
 
 const message = `Hello! "${name}".`;
@@ -132,7 +132,7 @@ console.log(message);
 ```
 #### Classes
 ##### exmaple 1
-```ruby
+```javascript
 class SkinnedMesh extends THREE.Mesh {
   constructor(geometry, materials) {
     super(geometry, materials);
@@ -158,7 +158,7 @@ class SkinnedMesh extends THREE.Mesh {
 }
 ```
 #### Spread Operator
-```ruby
+```javascript
 let params = [ "hello", true, 7 ]
 let other = [ 1, 2, params ] // [ 1, 2, "hello", true, 7 ]
 f(1, 2, params) === 9
@@ -167,7 +167,7 @@ let str = "foo"
 let chars = [str] // [ "f", "o", "o" ]
 ```
 #### Union, Intersection, Difference
-```ruby
+```javascript
 // union
 let a = new Set([1,2,3]);
 let b = new Set([4,3,2]);
@@ -192,7 +192,7 @@ let difference = new Set(
 ```
 #### Map
 ##### Exmaple 1 (Basic operations, size, clear and chainable)
-```ruby
+```javascript
 let map = new Map();
 map.set('dog', 123);
 map.get('dog')
@@ -232,7 +232,7 @@ let map = new Map()
 
 #### Promise
 #### Example 1
-```ruby
+```javascript
 
 // old pattern
 $.ajax('/stuff', {
@@ -253,7 +253,7 @@ fetch('/stuff')
     console.log('failed')
   });
 
-//multi task
+// multi task
 $.ajax('./stuff', {
     success: function(){
       $.ajax('./todo_stuff',{
@@ -283,7 +283,7 @@ fetch('/stuff')
   });
 ```
 ##### Example 2
-```ruby
+```javascript
 let promise = new Promise((resolve, reject) => {
 
   // when success, resolve  
@@ -301,8 +301,8 @@ promise.then(response => {
 
 // success
 ```
-##### Default, Rest and Spread
-```ruby
+##### Default, Rest, Spread
+```javascript
 // default
 let divided = function(number, divisor = 2){
     return number / divisor;
@@ -313,7 +313,7 @@ console.log(divided(2));    // 1
 console.log(divided(2, undefined));    // 1
 console.log(divided(2, null));    // 1
 
-// rest : example 1
+// rest: example 1
 function size(...theArgs) {
   console.log(theArgs.length);
 }
@@ -333,7 +333,7 @@ function sum(...numbers) {
 console.log(sum(2)); // 2
 console.log(sum(2, 4, 6)); // 12
 
-// spread : example 1
+// spread: example 1
 function sum(a, b, c) {
   return a + b + c;
 }
