@@ -4,13 +4,14 @@ Recipes for making your React.js Components Awesome
 # Table of Contents
 1. [Let, Const](#let-const)
 2. [Arrow Function](#arrow-function)
-3. [Template Stringst](#template-stringst)
+3. [Template Strings](#template-stringst)
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
 7. [Map](#map)
 8. [Promise](#promise)
 9. [Default, Rest, Spread](#default-rest-spread)
+10. [Destructuring](#destructuring)
 
 #### Let, Const
 ```javascript
@@ -356,4 +357,37 @@ let evenNumbers = [2, 4, 6], oddNumbers = [1, 5]
 
 console.log(minus(...evenNumbers)) // -2
 console.log(minus(...oddNumbers)) // -4
+```
+
+#### Destructuring
+```javascript
+let user = {
+  id: 1,
+  name: {
+    firstname: 'john',
+    lastname: 'henly'
+  },
+  age: 25,
+  email: 'abc@todo.com',
+  friends: [
+    'mark', 'mila', 'luna'
+  ],
+  socials: [
+    'abc@fackbook', 'abc@google', 'abc@github'
+  ]
+}
+// es5
+console.log(user.name.firstname); // john
+
+// destructuring with es6
+let { id: user_id,
+     	name: {firstname: user_firstname, lastname: user_lastname},
+     	age: user_age,
+     	email: user_email,
+      friends: [friend1, , friend3],
+    	username: user_username} = user // can also be used user()
+
+console.log(user_age, user_email); // 25 'abc@todo.com'
+console.log(friend3); // luna
+console.log(user_username); // undefined
 ```
