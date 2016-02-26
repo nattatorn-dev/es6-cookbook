@@ -12,7 +12,7 @@ Recipes for making your React.js Components Awesome
 8. [Promise](#promise)
 9. [Default, Rest, Spread](#default-rest-spread)
 10. [Destructuring](#destructuring)
-
+11. [Iterator](#iterator)
 #### Let, Const
 ```javascript
 
@@ -391,4 +391,25 @@ let { id: user_id,
 console.log(user_age, user_email); // 25 'abc@todo.com'
 console.log(friend3); // luna
 console.log(user_username); // undefined
+```
+
+##### Iterator
+```javascript
+// for-of loop
+for (LET of ITERABLE) {
+  CODE BLOCK
+}
+
+// Arrays in ES6 are iterable by default, we can even use a break, continue and return.
+const arr = [1, 2, 3, 4, 5];
+for (let item of arr) {
+  if (item > 4) {
+    break;
+  }
+  if (0 !== item % 2) {
+    continue;
+  }
+  console.log(item); // 2
+                     // 4
+}
 ```
