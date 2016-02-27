@@ -4,7 +4,7 @@ Recipes for making your React.js Components Awesome
 # Table of Contents
 1. [Let, Const](#let-const)
 2. [Arrow Function](#arrow-function)
-3. [Template Strings](#template-stringst)
+3. [Template Strings](#template-strings)
 4. [Classes](#classes)
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
@@ -13,6 +13,7 @@ Recipes for making your React.js Components Awesome
 9. [Default, Rest, Spread](#default-rest-spread)
 10. [Destructuring](#destructuring)
 11. [Iterator](#iterator)
+
 #### Let, Const
 ```javascript
 
@@ -27,13 +28,27 @@ console.log(count);  // count is not defined
 ![Arrow Function](http://www.uxebu.com/wp-content/uploads/2015/05/arrow-function4-150px-150x134.jpg)
 ##### exmaple 1
 ```javascript
-arr.map(val => val * 2)
+let arr = [1, 2, 3]
+// es5
+arr.map(function(val) { return val * 2 }) // [2, 4, 6]
 
-// instead of
-arr.map(function(val) { return val * 2 })
+// es6
+arr.map(val => val * 2) // [2, 4, 6]
+
 
 const isThree = num => num === 3;
 const containsThree = arr => !!arr.find(item => item === 3);
+
+// es5
+var func = function (param) {
+    return param.split(" ");
+}
+
+// es6
+let func = param => param.split(" ");
+
+func("Felipe Moura"); // returns ["Felipe", "Moura"]
+
 ```
 ##### exmaple 2
 ```javascript
@@ -81,7 +96,17 @@ bob._friends.push('Tae');
 bob.printFriends(); // Cannot read property '_name' of undefined
 bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 ```
+##### exmaple 4: Immediately-invoked
+```javascript
+( x => x * 2 )( 3 ); // 6
 
+( (x, y) => {
+    x = x * 2;
+    return x + y;
+})( 3, "A" ); // "6A"
+```
+
+#### template strings
 ##### example 1
 ```javascript
 // operator
