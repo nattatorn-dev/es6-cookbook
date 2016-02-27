@@ -13,6 +13,7 @@ Recipes for making your React.js Components Awesome
 9. [Default, Rest, Spread](#default-rest-spread)
 10. [Destructuring](#destructuring)
 11. [Iterator](#iterator)
+12. [Others](#others)
 
 #### Let, Const
 ```javascript
@@ -106,7 +107,7 @@ bob.printFriendsWithArrowFunction(); // "Bob knows Tae"
 })( 3, "A" ); // "6A"
 ```
 
-#### template strings
+#### Template strings
 ##### example 1
 ```javascript
 // operator
@@ -258,7 +259,7 @@ let map = new Map()
 ```
 
 #### Promise
-#### Example 1
+##### Example 1
 ```javascript
 
 // old pattern
@@ -328,7 +329,7 @@ promise.then(response => {
 
 // success
 ```
-##### Default, Rest, Spread
+#### Default, Rest, Spread
 ```javascript
 // default
 let divided = function(number, divisor = 2){
@@ -385,7 +386,7 @@ console.log(minus(...evenNumbers)) // -2
 console.log(minus(...oddNumbers)) // -4
 ```
 
-##### Destructuring
+#### Destructuring
 ```javascript
 let user = {
   id: 1,
@@ -418,7 +419,7 @@ console.log(friend3); // luna
 console.log(user_username); // undefined
 ```
 
-##### Iterator
+#### Iterator
 ```javascript
 // for-of loop
 for (LET of ITERABLE) {
@@ -437,4 +438,28 @@ for (let item of arr) {
   console.log(item); // 2
                      // 4
 }
+```
+
+#### Other
+```javascript
+// Computed Property Names
+// es5
+var prefix = 'users_';
+var myObject = {};
+
+myObject[prefix + 'name'] = 'nattatorn';
+myObject[prefix + 'age'] = 25;
+
+console.log(myObject['users_name']); // nattatorn
+console.log(myObject['users_age']); // 25
+
+// es6
+var prefix = 'users_';
+var myObject = {
+  [prefix + 'name']: 'nattatorn',
+  [prefix + 'age']: 25
+};
+
+console.log(myObject['users_name']); // nattatorn
+console.log(myObject['users_age']); // 25
 ```
