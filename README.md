@@ -463,3 +463,14 @@ var myObject = {
 console.log(myObject['users_name']); // nattatorn
 console.log(myObject['users_age']); // 25
 ```
+```javascript
+// Obj Initializer Shorthand
+function getPoint() {
+  var x = 1;
+  var y = 10;
+
+  return {x, y};
+}
+
+getPoint(); // { x: 1, y: 10 }
+```
