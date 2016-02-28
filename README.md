@@ -518,3 +518,8 @@ console.log(sayHello(emp)); // hello! nattatorn (No last name), I'm glad to see 
 console.log(knowFrineds(_myFriends)); // ["↵i know mike.", "↵i know aof.", "↵i know earth.", "↵i know big."]
 console.log(haveEmails(_myEmails, _git_emails, _bitbucket_emails));
 ```
+
+#### Must-todo
+
+- [ ] add new content #proxies
+- [ ] testing promise 
