@@ -14,7 +14,7 @@ Recipes for making your React.js Components Awesome
 10. [Destructuring](#destructuring)
 11. [Iterator](#iterator)
 12. [Others](#others)
-13. [Labs](#labs)
+13. [Labs](#labs) 
 
 #### Let, Const
 ```javascript
