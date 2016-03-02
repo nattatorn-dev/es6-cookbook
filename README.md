@@ -523,3 +523,4 @@ console.log(haveEmails(_myEmails, _git_emails, _bitbucket_emails));
 
 - [ ] add new content #proxies
 - [ ] testing promise 
+- [ ] redux
