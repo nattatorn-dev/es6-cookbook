@@ -525,3 +525,4 @@ console.log(haveEmails(_myEmails, _git_emails, _bitbucket_emails));
 - [ ] testing promise 
 - [ ] redux
 - [ ] saga
+- [ ] async es7 
