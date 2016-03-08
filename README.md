@@ -15,6 +15,7 @@ Recipes for making your React.js Components Awesome
 11. [Iterator](#iterator)
 12. [Others](#others)
 13. [Labs](#labs) 
+14. [Math] (#Math)
 
 #### Let, Const
 ```javascript
@@ -518,7 +519,36 @@ console.log(sayHello(emp)); // hello! nattatorn (No last name), I'm glad to see 
 console.log(knowFrineds(_myFriends)); // ["↵i know mike.", "↵i know aof.", "↵i know earth.", "↵i know big."]
 console.log(haveEmails(_myEmails, _git_emails, _bitbucket_emails));
 ```
+##### Math
+```javascript
+let choicesKey = ['a', 'b', 'c', 'd'];
+let max = 9;
 
+function* random (max) {
+   yield Math.floor(Math.random() * max) + 1;
+}
+
+function singleRandom (max) {
+   return Math.floor(Math.random() * max) + 1;
+}
+
+function* randomMath () {
+   while (true) {
+     yield* random(max);
+   }
+}
+
+function* randomOperator () {
+  while (true) {
+     yield operators[Math.floor(Math.random() * operators.length)];
+  }
+}
+let answer = Math.floor(eval(variableB + operatorA + variableA));
+let ques = `${variableA} ${operatorA} ${variableB} = _ ?`
+
+console.log(ques) // 5 + 5 = _ ?
+console.log(answer) // 10
+```
 #### Must-todo
 
 - [ ] add new content #proxies
