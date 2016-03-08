@@ -552,17 +552,21 @@ console.log(answer) // 10
 ##### Labs-shuffle
 ```javascript
 function shuffle(array) {
- let counter = array.length
+ let counter = array.length;
 
   while (counter > 0) {
-    let index = Math.floor(Math.random() * counter)
-     counter--
-    let temp = array[counter]
-     array[counter] = array[index]
-     array[index] = temp
+    let index = Math.floor(Math.random() * counter);
+     counter--;
+    let temp = array[counter];
+     array[counter] = array[index];
+     array[index] = temp;
   }
-  return array
+  return array;
 }
+
+let numbers = [1, 2, 3, 4]; // [1, 2, 3, 4]
+let transform = shuffle(numbers); // [2, 4, 1, 3]
+
 ```
 #### Must-todo
 
