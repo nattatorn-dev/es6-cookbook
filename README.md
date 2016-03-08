@@ -549,6 +549,21 @@ let ques = `${variableA} ${operatorA} ${variableB} = _ ?`
 console.log(ques) // 5 + 5 = _ ?
 console.log(answer) // 10
 ```
+##### Labs-shuffle
+```javascript
+function shuffle(array) {
+ let counter = array.length
+
+  while (counter > 0) {
+    let index = Math.floor(Math.random() * counter)
+     counter--
+    let temp = array[counter]
+     array[counter] = array[index]
+     array[index] = temp
+  }
+  return array
+}
+```
 #### Must-todo
 
 - [ ] add new content #proxies
