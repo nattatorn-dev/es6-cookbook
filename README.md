@@ -543,14 +543,13 @@ function* randomOperator () {
      yield operators[Math.floor(Math.random() * operators.length)];
   }
 }
-let answer = Math.floor(eval(variableB + operatorA + variableA));
-let ques = `${variableA} ${operatorA} ${variableB} = _ ?`
+let answer = Math.floor(eval(variableB + operatorA + variableA)); // 5 + 5 = _ ?
+let ques = `${variableA} ${operatorA} ${variableB} = _ ?` // 10
 
-console.log(ques) // 5 + 5 = _ ?
-console.log(answer) // 10
 ```
-##### Labs-shuffle
+##### Labs random, remove, range
 ```javascript
+// [1, 2, 3, 4] to [2, 4, 1, 3]
 function shuffle(array) {
  let counter = array.length;
 
@@ -567,6 +566,41 @@ function shuffle(array) {
 let numbers = [1, 2, 3, 4]; // [1, 2, 3, 4]
 let transform = shuffle(numbers); // [2, 4, 1, 3]
 
+function randomAndPickOne(arrays) {
+  return arrays[Math.floor(Math.random() * arrays.length)];
+}
+
+let numbers = [1, 2, 3, 4]; // [1, 2, 3, 4]
+let transform = randomAndPickOne(numbers); // 2
+
+function removeValueOfArrays(arr) {
+  var what, a = arguments,
+    L = a.length,
+    ax;
+  while (L > 1 && arr.length) {
+    what = a[--L];
+    while ((ax = arr.indexOf(what)) !== -1) {
+      arr.splice(ax, 1);
+    }
+  }
+  return arr;
+}
+
+let strings = ['cat', 'dog']; // ['cat', 'dog']
+let transform = removeValueOfArrays(strings, 'cat'); // ['dog']
+
+function range(first, last) {
+  var a = first.charCodeAt(0)
+  var b = last.charCodeAt(0) + 1
+  return Array.apply(null, {
+      length: Math.abs(b - a)
+    })
+    .map(function(x, i) {
+      return String.fromCharCode(Math.min(a, b) + i)
+    });
+}
+
+let AZ = range('a', 'z') // ['a', ..... 'z']
 ```
 #### Must-todo
 
