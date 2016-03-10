@@ -549,7 +549,7 @@ let ques = `${variableA} ${operatorA} ${variableB} = _ ?` // 10
 ```
 ##### Labs random, remove, range
 ```javascript
-// [1, 2, 3, 4] to [2, 4, 1, 3]
+// shuffle
 function shuffle(array) {
  let counter = array.length;
 
@@ -566,6 +566,7 @@ function shuffle(array) {
 let numbers = [1, 2, 3, 4]; // [1, 2, 3, 4]
 let transform = shuffle(numbers); // [2, 4, 1, 3]
 
+// randomAndPickOne
 function randomAndPickOne(arrays) {
   return arrays[Math.floor(Math.random() * arrays.length)];
 }
@@ -573,6 +574,7 @@ function randomAndPickOne(arrays) {
 let numbers = [1, 2, 3, 4]; // [1, 2, 3, 4]
 let transform = randomAndPickOne(numbers); // 2
 
+// removeValueOfArrays
 function removeValueOfArrays(arr) {
   var what, a = arguments,
     L = a.length,
@@ -589,7 +591,8 @@ function removeValueOfArrays(arr) {
 let strings = ['cat', 'dog']; // ['cat', 'dog']
 let transform = removeValueOfArrays(strings, 'cat'); // ['dog']
 
-function range(first, last) {
+// range
+function rangeString(first, last) {
   var a = first.charCodeAt(0)
   var b = last.charCodeAt(0) + 1
   return Array.apply(null, {
@@ -600,7 +603,23 @@ function range(first, last) {
     });
 }
 
-let AZ = range('a', 'z') // ['a', ..... 'z']
+function rangeNumber(start, last) {
+    let numbers = [];
+    for (let i = start; i <= last; i++) {
+        numbers.push(i);
+    }
+    return numbers;
+}
+
+let AZ = rangeString('a', 'z') // ['a', ..... 'z']
+let AZ = rangeNumber(1, 10) // [1, ..... 10]
+// contains
+function contains(string, seach) {
+  return string.indexOf(seach) > -1
+}
+
+let swearWord = contains('f****', '*') // true
+
 ```
 #### Must-todo
 
