@@ -16,7 +16,6 @@ Recipes for making your React.js Components Awesome
 12. [Others](#others)
 13. [Labs](#labs) 
 14. [Math] (#Math)
-15. [Class] (#Class)
 
 #### Let, Const
 ```javascript
@@ -187,6 +186,35 @@ class SkinnedMesh extends THREE.Mesh {
     return new THREE.Matrix4();
   }
 }
+```
+##### import-export
+```javascript
+//lib.js
+export const a = 2;
+export function b(x) {
+    return x * x;
+}
+
+//
+import { a, b } from 'lib';
+console.log(a) // 2
+console.log(b(a)) // 4
+
+//
+import * as lib from 'lib';
+console.log(lib.a) // 2
+console.log(lib.b(a)) // 4
+
+//
+export default function () { ... };
+import myFunc from 'myFunc';
+
+myFunc();
+
+export default class { ... };
+import MyClass from 'MyClass';
+
+let inst = new MyClass();
 ```
 #### Spread Operator
 ```javascript
@@ -621,35 +649,6 @@ function contains(string, seach) {
 
 let swearWord = contains('f****', '*') // true
 
-```
-##### Class
-```javascript
-//lib.js
-export const a = 2;
-export function b(x) {
-    return x * x;
-}
-
-//
-import { a, b } from 'lib';
-console.log(a) // 2
-console.log(b(a)) // 4
-
-//
-import * as lib from 'lib';
-console.log(lib.a) // 2
-console.log(lib.b(a)) // 4
-
-//
-export default function () { ... };
-import myFunc from 'myFunc';
-
-myFunc();
-
-export default class { ... };
-import MyClass from 'MyClass';
-
-let inst = new MyClass();
 ```
 #### Must-todo
 
