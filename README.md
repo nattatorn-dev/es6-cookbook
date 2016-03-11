@@ -657,3 +657,4 @@ let swearWord = contains('f****', '*') // true
 - [ ] redux
 - [ ] saga
 - [ ] async es7 
+- [ ] AvanceContainArray
