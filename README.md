@@ -677,10 +677,10 @@ function arrayContainArrays(arrayA, arrayB, strings) {
   }
   
   let currentIndex = 0
+  // iterator
   for(let string of nextItem()){
-    console.log(stringToArray)
     let hasTrue = containArrays(string, stringToArray[currentIndex])
-        console.log(hasTrue)
+    
     if(!hasTrue) {
       success = false
       break
