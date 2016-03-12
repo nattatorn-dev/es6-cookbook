@@ -652,17 +652,11 @@ function contains(string, seach) {
 
 let swearWord = contains('f****', '*') // true
 
-#### Contain
-```javascript
-// contains
-function contains(string, seach) {
-  return string.indexOf(seach) > -1
-}
+// contain
+let QUIZZES = ['QUIZZES', 'QUIZZE', 'CLICK', 'CLIP', 'KICK']
+let ARTHUR = ['ARTHUR', 'AUTO', 'ADULT', 'OTHER']
 
-let swearWord = contains('f****', '*') // true
-
-// support upper and lower case
-
+//support upper and lower case
 function containArrays(array, string) {
   
     let lowerCase = array.map(v =>
@@ -671,10 +665,37 @@ function containArrays(array, string) {
     return (lowerCase.indexOf(string.toLowerCase()) != -1)
 }
 
+function arrayContainArrays(arrayA, arrayB, strings) {
+  let stringToArray = strings.split(' ')
+  let prepare = []
+  let success = true
+
+  // test 2 arrays
+  function* nextItem () {
+    yield arrayA
+    yield arrayB
+  }
+  
+  let currentIndex = 0
+  for(let string of nextItem()){
+    console.log(stringToArray)
+    let hasTrue = containArrays(string, stringToArray[currentIndex])
+        console.log(hasTrue)
+    if(!hasTrue) {
+      success = false
+      break
+    }
+    currentIndex++
+  }
+  return success
+}
+
+// todo: ArraysContainArrays
+
 
 console.log(containArrays(QUIZZES,'qUIZZES')) // true
-
-```
+console.log(arrayContainArrays(ARTHUR, QUIZZES,'xxxx quizze')) // false
+console.log(arrayContainArrays(ARTHUR, QUIZZES,'ADULT KICK')) // true
 ```
 #### Must-todo
 
@@ -683,4 +704,4 @@ console.log(containArrays(QUIZZES,'qUIZZES')) // true
 - [ ] redux
 - [ ] saga
 - [ ] async es7 
-- [ ] AvanceContainArray
+- [x] AvanceContainArrays
