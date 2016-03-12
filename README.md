@@ -642,6 +642,9 @@ function rangeNumber(start, last) {
 
 let AZ = rangeString('a', 'z') // ['a', ..... 'z']
 let AZ = rangeNumber(1, 10) // [1, ..... 10]
+```
+#### Contain Array
+```javascript
 // contains
 function contains(string, seach) {
   return string.indexOf(seach) > -1
@@ -649,6 +652,29 @@ function contains(string, seach) {
 
 let swearWord = contains('f****', '*') // true
 
+#### Contain
+```javascript
+// contains
+function contains(string, seach) {
+  return string.indexOf(seach) > -1
+}
+
+let swearWord = contains('f****', '*') // true
+
+// support upper and lower case
+
+function containArrays(array, string) {
+  
+    let lowerCase = array.map(v =>
+      v.toLowerCase()
+    )
+    return (lowerCase.indexOf(string.toLowerCase()) != -1)
+}
+
+
+console.log(containArrays(QUIZZES,'qUIZZES')) // true
+
+```
 ```
 #### Must-todo
 
