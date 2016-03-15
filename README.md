@@ -15,8 +15,8 @@ Recipes for making your React.js Components Awesome
 11. [Iterator](#iterator)
 12. [Others](#others)
 13. [Labs](#labs) 
-14. [Math] (#Math)
-15. [Map, Set, WeakMap, WeakSet]
+14. [Math] (#math)
+15. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
 
 #### Let, Const
 ```javascript
