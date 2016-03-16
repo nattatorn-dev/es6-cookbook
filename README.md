@@ -702,7 +702,7 @@ console.log(arrayContainArrays(ARTHUR, QUIZZES,'ADULT KICK')) // true
 
 - [ ] add new content #proxies
 - [ ] testing promise 
-- [ ] redux
+- [x] redux
 - [ ] saga
 - [ ] async es7 
 - [x] AvanceContainArrays
