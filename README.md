@@ -706,3 +706,6 @@ console.log(arrayContainArrays(ARTHUR, QUIZZES,'ADULT KICK')) // true
 - [ ] saga
 - [ ] async es7 
 - [x] AvanceContainArrays
+
+#### svg
+change color .svg fill="#933028"
