@@ -16,7 +16,8 @@ Recipes for making your React.js Components Awesome
 12. [Others](#others)
 13. [Labs](#labs) 
 14. [Math] (#math)
-15. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)s
+15. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
+16. [Tips] (#tips)
 
 #### Let, Const
 ```javascript
@@ -760,6 +761,17 @@ function arrayContainArrays(arrayA, arrayB, strings) {
 console.log(containArrays(QUIZZES,'qUIZZES')) // true
 console.log(arrayContainArrays(ARTHUR, QUIZZES,'xxxx quizze')) // false
 console.log(arrayContainArrays(ARTHUR, QUIZZES,'ADULT KICK')) // true
+```
+
+#### Tips
+```javascript
+// clear member in array
+// There are different ways to clear array depending on requirement. The results below are for chrome.
+
+array = []; //Fastest
+while(array.length > 0) { array.pop(); } //Faster
+a.splice(0,a.length) //Slowest
+a.length = 0; //Slowest
 ```
 #### Must-todo
 
