@@ -190,6 +190,65 @@ class SkinnedMesh extends THREE.Mesh {
   }
 }
 ```
+##### exmaple 2
+```javascript
+class Constroctor {
+  constructor(height, weight, bedroom, bathroom, people, address, rental) {
+    this.height = height
+    this.weight = weight
+    this.bedroom = bedroom
+    this.bathroom = bathroom
+    this.people = people
+    this.address = address
+    this.rental = rental
+  }
+  
+  getArea() {
+    return this.height * this.weight
+  }
+  
+  getRental() {
+    return this.rental
+  }
+  
+  getTotalRoom() {
+    return this.bedroom + this.bathroom
+  }
+  
+  getInformation() {
+    return `Total room: ${this.getTotalRoom()} (${this.bedroom} bedroom ${this.bathroom} bathroom)
+Area: ${this.address}`
+  }
+}
+
+class Condo extends Constroctor {
+  constructor(height, weight, bedroom, bathroom, people, address, rental, nearestStation, commonFeeCharge){
+    super(height, weight, bedroom, bathroom, people, address, rental)
+    this.nearestStation = nearestStation
+    this.commonFeeCharge = commonFeeCharge
+  }
+  
+  getInformation() {
+    return `Total: ${super.getArea()} sq. 
+Pricing: ${super.getRental()} month
+${super.getInformation()}
+Nearest Station: ${this.nearestStation}
+Common fee charge: ${this.commonFeeCharge} month`
+  }
+}
+
+let siri = new Condo(40, 120, 2, 1, 1, 'Huai Khwang', 6500, 'MRT Huai Khwang', 1500)
+console.log(siri.getInformation())
+
+
+//output
+Total: 4800 sq. 
+Pricing: 6500 month
+Total room: 3 (2 bedroom 1 bathroom)
+Area: Huai Khwang
+Nearest Station: MRT Huai Khwang
+Common fee charge: 1500 month
+```
 ##### import-export
 ```javascript
 //lib.js
