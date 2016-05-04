@@ -280,12 +280,39 @@ let inst = new MyClass();
 ```
 #### Spread Operator
 ```javascript
+// example 1
 let params = [ "hello", true, 7 ]
 let other = [ 1, 2, params ] // [ 1, 2, "hello", true, 7 ]
 f(1, 2, params) === 9
 
 let str = "foo"
 let chars = [str] // [ "f", "o", "o" ]
+
+// example 2
+let items1 = [1,2,3,4]
+let items2 = [5,6,7,8]
+
+function spreadForeach1 (...items) {
+  items.forEach(function (item) {
+      console.log(item)
+  })
+}
+
+spreadForeach1(items1,items2) 
+// [1,2,3,4]
+// [5,6,7,8]
+
+function spreadForeach2 (...items) {
+  items.forEach(function (item) {
+      console.log(item)
+  })
+}
+
+spreadForeach2(...items1)
+// 1
+// 2
+// 3
+// 4
 ```
 #### Union, Intersection, Difference
 ```javascript
