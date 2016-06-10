@@ -17,8 +17,9 @@ Recipes for making your React.js Components Awesome
 13. [Labs](#labs) 
 14. [Math] (#math)
 15. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
-16. [Tips] (#tips)
-17. [Algorithm] (#algorithm)
+16. [Redux] (#redux)
+17. [Tips] (#tips)
+18. [Algorithm] (#algorithm)
 
 #### Let, Const
 ```javascript
@@ -313,6 +314,45 @@ spreadForeach2(...items1)
 // 2
 // 3
 // 4
+```
+#### Spread Operator II
+```javascript
+// es5
+function max() {  
+  // arguments contains all params, named + non-named
+  // we use Function#apply to pass those as individual arguments
+  return Math.max.apply(null, arguments);
+}
+// => 18
+
+// es6
+const max = (...nums) => Math.max(...nums)
+max(5,18,1,8)
+// => 18
+
+// es5
+function join(sep /*, ...args*/) {  
+  var args = [].slice.call(arguments, 1)
+  return args.join(sep)
+}
+
+// => one:two:three
+// es6
+const join = (sep, ...args) => args.join(sep)
+join(':', "one", "two", "three")
+//=> one:two:three
+
+// es5
+let merged = Object.assign(base, src1, src2);
+// => { a: 1, b: 3, c: 4 }
+
+// es6
+merged = {  
+    ...base,
+    ...src1,
+    ...src2
+  };
+// => { a: 1, b: 3, c: 4 }
 ```
 #### Union, Intersection, Difference
 ```javascript
@@ -621,6 +661,29 @@ for (let item of arr) {
   console.log(item); // 2
                      // 4
 }
+```
+
+#### redux
+
+```javascript
+return Object.assign({}, state, {
+ visibilityFilter: action.filter
+})
+return { ...state, visibilityFilter: action.filter }
+ 
+ 
+return getAddedIds(state.cart).map(id => Object.assign(
+ {},
+ getProduct(state.products, id),
+ {
+ quantity: getQuantity(state.cart, id)
+ }
+))
+
+return getAddedIds(state.cart).map(id => ({
+ ...getProduct(state.products, id),
+ quantity: getQuantity(state.cart, id)
+}))
 ```
 
 #### Other
