@@ -22,14 +22,88 @@ Recipes for making your React.js Components Awesome
 18. [Algorithm] (#algorithm)
 
 #### Let, Const
+### Const
+```javascript
+const names = ['Jordan', 'mark']
+names.push('bella')
+console.log( names ) //['Jordan', 'mark', bella]
+
+const names = {name: 'mark'}
+names.age = 12
+console.log( names ) // Object {name: "mark", age: 12}
+// Here’s a simple example. In the code below we create a new variable with a constant reference to an Array. We can then add values onto the array and since this does not change the reference, everything works
+
+	
+const names = [];
+names = [];  // Error!
+// Of course, if you have a const that points to a primitive such as a string or number, then there really isn’t anything to change about that value. All methods on String and Number return new values (objects)
+// https://strongloop.com/strongblog/es6-variable-declarations/
+```
+### Var, Let
 ```javascript
 
-let count = 0;
-console.log(count);  // 0
-const API_KEY = 'KEY';
-API_KEY = 'NEW_KEY'; // ERROR! "API_KEY" is read-only
+var users = 100
+var users = 25
+console.log(users) // 25
 
-console.log(count);  // count is not defined
+let users = 100
+let users = 25
+console.log(users) // err
+
+var number = 0
+
+{
+  let number = 2
+  console.log(number)
+}
+
+console.log(number)
+// 0
+// 2
+
+var number = 0
+
+{
+  var number = 2
+  console.log(number)
+}
+
+console.log(number)
+// 2
+// 2
+
+```
+
+#### declare let outter scope and innner scope
+```javascript 
+
+//real world
+let users = ['mark','john', 'sara']
+
+{
+  let users = ['jenny']
+  console.log(users) // ["jenny"]
+}
+console.log(users) // ['mark','john', 'sara']
+  
+
+let users = ['mark','john', 'sara']
+
+{
+  console.log(users) // undefined
+  
+  let users = ['jenny']
+  console.log(users) // ["jenny"]
+}
+
+var users = ['mark','john', 'sara']
+
+{
+  console.log(users) // ["mark", "john", "sara"]
+
+  var users = ['jenny']
+  console.log(users) // ["jenny"]
+}
 ```
 #### Arrow Function
 ![Arrow Function](http://www.uxebu.com/wp-content/uploads/2015/05/arrow-function4-150px-150x134.jpg)
