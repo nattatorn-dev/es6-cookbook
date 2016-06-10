@@ -37,7 +37,19 @@ console.log( names ) // Object {name: "mark", age: 12}
 const names = [];
 names = [];  // Error!
 // Of course, if you have a const that points to a primitive such as a string or number, then there really isn’t anything to change about that value. All methods on String and Number return new values (objects)
-// https://strongloop.com/strongblog/es6-variable-declarations/
+primitive type
+- Number
+- String
+- Booleanl
+- undefined
+- null
+
+reference type 
+- Object
+- Array
+- Function
+- Date
+- RegExp
 ```
 ### Var, Let
 ```javascript
