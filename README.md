@@ -9,17 +9,18 @@ Recipes for making your React.js Components Awesome
 5. [Spread Operator](#spread-operator)
 6. [Union, Intersection, Difference](#union-intersection-difference)
 7. [Map](#map)
-8. [Promise](#promise)
-9. [Default, Rest, Spread](#default-rest-spread)
-10. [Destructuring](#destructuring)
-11. [Iterator](#iterator)
-12. [Others](#others)
-13. [Labs](#labs) 
-14. [Math] (#math)
-15. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
-16. [Redux] (#redux)
-17. [Tips] (#tips)
-18. [Algorithm] (#algorithm)
+8. [Array](#array)
+9. [Promise](#promise)
+10. [Default, Rest, Spread](#default-rest-spread)
+11. [Destructuring](#destructuring)
+12. [Iterator](#iterator)
+13. [Others](#others)
+14. [Labs](#labs) 
+15. [Math] (#math)
+16. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
+17. [Redux] (#redux)
+18. [Tips] (#tips)
+19. [Algorithm] (#algorithm)
 
 #### Let, Const
 ### Const
@@ -242,7 +243,7 @@ console.log(tmpl([
 // output
 <table>
 
-      <tr>Jane</tr>
+      <tr>Jane</tr> 
       <tr>&lt;Bond&gt;</tr>
 
       <tr>&lt;Lars&gt;</tr>
