@@ -1086,60 +1086,6 @@ function rangeNumber(start, last) {
 let AZ = rangeString('a', 'z') // ['a', ..... 'z']
 let AZ = rangeNumber(1, 10) // [1, ..... 10]
 ```
-#### Contain Array
-```javascript
-// contains
-function contains(string, seach) {
-  return string.indexOf(seach) > -1
-}
-
-let swearWord = contains('f****', '*') // true
-
-// contain
-let QUIZZES = ['QUIZZES', 'QUIZZE', 'CLICK', 'CLIP', 'KICK']
-let ARTHUR = ['ARTHUR', 'AUTO', 'ADULT', 'OTHER']
-
-//support upper and lower case
-function containArrays(array, string) {
-  
-    let lowerCase = array.map(v =>
-      v.toLowerCase()
-    )
-    return (lowerCase.indexOf(string.toLowerCase()) != -1)
-}
-
-function arrayContainArrays(arrayA, arrayB, strings) {
-  let stringToArray = strings.split(' ')
-  let prepare = []
-  let success = true
-
-  // test 2 arrays
-  function* nextItem () {
-    yield arrayA
-    yield arrayB
-  }
-  
-  let currentIndex = 0
-  // iterator
-  for(let string of nextItem()){
-    let hasTrue = containArrays(string, stringToArray[currentIndex])
-    
-    if(!hasTrue) {
-      success = false
-      break
-    }
-    currentIndex++
-  }
-  return success
-}
-
-// todo: ArraysContainArrays
-
-
-console.log(containArrays(QUIZZES,'qUIZZES')) // true
-console.log(arrayContainArrays(ARTHUR, QUIZZES,'xxxx quizze')) // false
-console.log(arrayContainArrays(ARTHUR, QUIZZES,'ADULT KICK')) // true
-```
 
 #### Algorithm
 ```javascript
