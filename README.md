@@ -2,26 +2,59 @@
 Recipes for making your React.js Components Awesome
 
 # Table of Contents
-1. [Let, Const](#let-const)
-2. [Arrow Function](#arrow-function)
-3. [Template Strings](#template-strings)
-4. [Classes](#classes)
-5. [Spread Operator](#spread-operator)
-6. [Union, Intersection, Difference](#union-intersection-difference)
-7. [Map](#map)
-8. [Array](#array)
-9. [Promise](#promise)
-10. [Default, Rest, Spread](#default-rest-spread)
-11. [Destructuring](#destructuring)
-12. [Iterator](#iterator)
-13. [Others](#others)
-14. [Labs](#labs) 
-15. [Math] (#math)
-16. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
-17. [Redux] (#redux)
-18. [Tips] (#tips)
-19. [Algorithm] (#algorithm)
+[FunctionalProgramming](#functional-programming)
+[Let, Const](#let-const)
+[Arrow Function](#arrow-function)
+[Template Strings](#template-strings)
+[Classes](#classes)
+[Spread Operator](#spread-operator)
+[Union, Intersection, Difference](#union-intersection-difference)
+[Map](#map)
+[Array](#array)
+[Promise](#promise)
+[Default, Rest, Spread](#default-rest-spread)
+[Destructuring](#destructuring)
+[Iterator](#iterator)
+[Others](#others)
+[Labs](#labs) 
+[Math] (#math)
+[Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
+[Redux] (#redux)
+[Tips] (#tips)
+[Algorithm] (#algorithm)
 
+
+#### functional intro
+```js
+const convertSpaceToDash = (text) => { return text.replace(' ', '-') }
+const lowercase = (text) => { return text.toLowerCase() }
+const prefix = (text) => { return `# ${text}` }
+
+// fix args es5
+const composeTree = (f1, f2) => {
+  return (res1) => {
+    return f1(f2(res1))
+  }
+}
+
+const convertSpaceToDashLowercase = composeSpread(
+  convertSpaceToDash, 
+  lowercase
+)
+
+console.log(convertSpaceToDashLowercase('Hello World')) // hello-world
+
+// compose spread you can pass multi param to compose function
+let composeSpread = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
+
+const convertSpaceToDashLowercaseAndPredfix = composeSpread(
+  convertSpaceToDash, 
+  lowercase,
+  prefix
+)
+
+console.log(convertSpaceToDashLowercaseAndPredfix('Hello World')) // # hello-world
+```
 #### Let, Const
 ### Const
 ```javascript
