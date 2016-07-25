@@ -25,7 +25,24 @@ Recipes for making your React.js Components Awesome
 
 
 #### functional intro
-##### compose
+### Recursion
+```js
+// normal
+var counter = 10;
+while(counter > 0) {
+    console.log(counter--);
+}
+
+// Tail call optimization
+const countdown = (counter) => {
+  if(counter > 0) {
+    console.log(counter)
+    return countdown(counter - 1)
+  } return counter
+}
+countdown(10) //10~0
+```
+### Compose
 ```js
 const convertSpaceToDash = (text) => { return text.replace(' ', '-') }
 const lowercase = (text) => { return text.toLowerCase() }
