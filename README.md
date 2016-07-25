@@ -2,7 +2,7 @@
 Recipes for making your React.js Components Awesome
 
 # Table of Contents
-[FunctionalProgramming](#functional-programming)
+[Functional](#functional-intro)
 [Let, Const](#let-const)
 [Arrow Function](#arrow-function)
 [Template Strings](#template-strings)
@@ -25,6 +25,7 @@ Recipes for making your React.js Components Awesome
 
 
 #### functional intro
+##### compose
 ```js
 const convertSpaceToDash = (text) => { return text.replace(' ', '-') }
 const lowercase = (text) => { return text.toLowerCase() }
