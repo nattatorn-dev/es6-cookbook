@@ -2,26 +2,26 @@
 Recipes for making your React.js Components Awesome
 
 # Table of Contents
-[Functional](#functional-intro)
-[Let, Const](#let-const)
-[Arrow Function](#arrow-function)
-[Template Strings](#template-strings)
-[Classes](#classes)
-[Spread Operator](#spread-operator)
-[Union, Intersection, Difference](#union-intersection-difference)
-[Map](#map)
-[Array](#array)
-[Promise](#promise)
-[Default, Rest, Spread](#default-rest-spread)
-[Destructuring](#destructuring)
-[Iterator](#iterator)
-[Others](#others)
-[Labs](#labs) 
-[Math] (#math)
-[Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
-[Redux] (#redux)
-[Tips] (#tips)
-[Algorithm] (#algorithm)
+1. [Functional](#functional-intro)
+2. [Let, Const](#let-const)
+3. [Arrow Function](#arrow-function)
+4. [Template Strings](#template-strings)
+5. [Classes](#classes)
+6. [Spread Operator](#spread-operator)
+7. [Union, Intersection, Difference](#union-intersection-difference)
+8. [Map](#map)
+9. [Array](#array)
+10. [Promise](#promise)
+11. [Default, Rest, Spread](#default-rest-spread)
+12. [Destructuring](#destructuring)
+13. [Iterator](#iterator)
+14. [Others](#others)
+15. [Labs](#labs) 
+16.[Math] (#math)
+17. [Map, Set, WeakMap, WeakSet] (#map-set-weakMap-weakSet)
+18. [Redux] (#redux)
+19. [Tips] (#tips)
+20. [Algorithm] (#algorithm)
 
 
 #### functional intro
@@ -1173,14 +1173,3 @@ while(array.length > 0) { array.pop(); } //Faster
 a.splice(0,a.length) //Slowest
 a.length = 0; //Slowest
 ```
-#### Must-todo
-
-- [ ] add new content #proxies
-- [ ] testing promise 
-- [ ] redux
-- [ ] saga
-- [ ] async es7 
-- [x] AvanceContainArrays
-
-#### svg
-change color .svg fill="#933028"
