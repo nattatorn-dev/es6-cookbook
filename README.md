@@ -73,6 +73,49 @@ const convertSpaceToDashLowercaseAndPredfix = composeSpread(
 
 console.log(convertSpaceToDashLowercaseAndPredfix('Hello World')) // # hello-world
 ```
+#### IIFE (immediately invoked function expression)
+```js
+// IIFE
+let total = 0
+const iife = () => {
+// first class func
+  let total = 0
+
+  return {
+  // module pattern
+    getTotal() {
+      return total
+    },
+    getDoubleTotal() {
+      return total * 2
+    },
+    setNumber(number) {
+      total += number
+    },
+    clear() {
+      total = 0
+    }
+  }
+}
+
+let sum = iife()
+
+sum.getTotal() // 0
+sum.setNumber(100)
+sum.getTotal() // 100
+sum.setNumber(20)
+total = 0 // can't effect with iife function
+sum.getTotal() // 120
+sum.getDoubleTotal() //240
+
+// IIFE
+let x = 99
+((x, y) => {
+  x = x * 2
+  return x + y
+})(10, 2) // 22
+```
+
 #### Let, Const
 ### Const
 ```javascript
