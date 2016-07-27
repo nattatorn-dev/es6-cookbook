@@ -104,7 +104,7 @@ sum.getTotal() // 0
 sum.setNumber(100)
 sum.getTotal() // 100
 sum.setNumber(20)
-total = 0 // can't effect with iife function
+total = 0 // not effect with iife function
 sum.getTotal() // 120
 sum.getDoubleTotal() //240
 
